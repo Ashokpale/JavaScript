@@ -88,6 +88,8 @@ typeof alert
 let msg = "Vannila Java Nerchukundham";
 console.log('msg variable  is a data type of '  + typeof(msg))
 
+////////////
+
 
 
 
