@@ -13,7 +13,7 @@
         How to Insert JS,Variable & Data Types
     </h1>
     <p>
-       write a javascript alert in internal, external, inline <br>
+        write a javascript alert in internal, external, inline <br>
 
         Create a simple JavaScript script that declares three different types of variables (var, let, and const) and
         prints their values to the console. <br>
@@ -23,9 +23,33 @@
         Use the typeof operator to log the type of each variable to the console
     </p>
 
+   
+
+    <h1>JavaScript Arrays</h1>
+    <h2>Looping an Array</h2>
+
+    <p id="arrays"></p>
+    
+
+    <!-- inline js  -->
+    <script>
+        const fruits = ["Banana", "Orange", "Apple", "Mango"];
+        let fLen = fruits.length;
+
+        let text = "<ol>";
+        for (let i = 0; i < fLen; i++) {
+            text += "<li>" + fruits[i] + "</li>";
+        }
+        text += "</ol>";
+
+        document.getElementById("arrays").innerHTML = text;
+
+    
+
+        // External js
+    </script>
+
     <a href="">task link</a>
-
-
 
     <script src="task.js"></script>
 </body>
