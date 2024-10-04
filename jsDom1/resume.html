@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume</title>
+</head>
+
+<body>
+
+
+
+    <script>
+        //steps create element by dom, give text and apply styles 
+
+        let name = document.createElement('h2');
+        name.innerText = "ASHOK PALE";
+        name.style.textAlign = 'center';
+        name.style.color = 'blue';
+        name.style.fontSize = '30px';
+        name.style.marginBottom = '10px';
+        document.body.append(name);
+
+
+        // creating the function for the purpose of multipleLine so, i can use easily in code
+
+        function createHorizontalLine() {
+            let hr = document.createElement('hr');
+            hr.style.border = '1px solid lightgrey';
+            hr.style.width = '100%';
+            hr.style.margin = '10px 0';
+            hr.style.padding = '0';
+            return hr;
+        }
+
+        // contact list items 
+
+        let contactList = document.createElement('ul');
+
+        let emailAddress = document.createElement('li');
+        emailAddress.textContent = " Gmail: paleashok47@gmail.com";
+
+        let phoneNumber = document.createElement('li');
+        phoneNumber.textContent = "Phone: (+91)9392182201";
+
+        let address = document.createElement('li');
+        address.textContent = "Hyderabad,India";
+
+        let linkedinID = document.createElement('li');
+        linkedinID.textContent = "linkedin.com/in/ashok-pale-073721175/";
+
+        contactList.appendChild(emailAddress);
+        contactList.appendChild(phoneNumber);
+        contactList.appendChild(address);
+        contactList.appendChild(linkedinID);
+
+        document.body.appendChild(contactList);
+
+        //applying styling 
+
+        contactList.style.listStyleType = 'none';
+        contactList.style.display = 'flex';
+        contactList.style.flexDirection = 'row';
+        contactList.style.justifyContent = 'center';
+        contactList.style.alignItems = 'center';
+        contactList.style.gap = '20px';
+        contactList.style.padding = '20px';
+        contactList.style.marginTop = '0px';
+
+        //reseime objective 
+
+        let objective = document.createElement('h2');
+        objective.textContent = "Career Objective:";
+        document.body.append(objective);
+
+        //styling objective 
+        objective.style.color = 'blue';
+        objective.style.padding = '0';
+        objective.style.margin = '0';
+
+        document.body.appendChild(createHorizontalLine());
+
+        //objective content 
+
+        let objectiveContent = document.createElement('p');
+        objectiveContent.textContent = "As an Electronics Engineering student with a strong passion for software development, I am eager to apply my technical expertise and problem-solving skills to create innovative, efficient, and impactful software solutions. I seek opportunities to grow in software engineering, where I can combine my knowledge of electronics with my enthusiasm for coding to drive technological advancements and contribute meaningfully to dynamic projects.";
+
+        document.body.appendChild(objectiveContent);
+
+        // Styling objective content
+        objectiveContent.style.textAlign = 'justify';
+        objectiveContent.style.padding = '10px 20px';
+        objectiveContent.style.fontSize = '16px';
+        objectiveContent.style.lineHeight = '1.5';
+
+        // Education Section
+        let educationSection = document.createElement('h2');
+        educationSection.textContent = "Education:";
+        document.body.append(educationSection);
+
+        document.body.appendChild(createHorizontalLine());
+
+
+        // Styling Education Section
+        educationSection.style.color = 'blue';
+        educationSection.style.margin = '10px 0';
+        // Create Education Details
+        let educationDetails = document.createElement('div');
+        educationDetails.style.padding = '10px 20px';
+
+        // B.Tech Item
+        let btech = document.createElement('div');
+        btech.innerHTML = "<strong>Bachelor of Technology in Electronics and Communication Engineering</strong><br>" +
+            "2019 - 2022 | Sreyas Institute of Engineering and Technology, Hyderabad, India<br>" +
+            "CGPA: 6.33";
+        educationDetails.appendChild(btech);
+
+        // Diploma Item
+        let diploma = document.createElement('div');
+        diploma.innerHTML = "<strong>Diploma in Electronics and Communication Engineering</strong><br>" +
+            "2016 - 2019 | Government Polytechnic College, Mahabubnagar, India<br>" +
+            "Percentage: 79.46%";
+        educationDetails.appendChild(diploma);
+
+        // Append Education Details
+        document.body.appendChild(educationDetails);
+
+        // Styling Education Details
+        educationDetails.style.fontSize = '16px';
+        educationDetails.style.lineHeight = '1.5';
+        educationDetails.style.marginTop = '10px';
+
+
+
+        // Experience Section
+        let experienceSection = document.createElement('h2');
+        experienceSection.textContent = "Experience:";
+        document.body.append(experienceSection);
+
+        document.body.appendChild(createHorizontalLine());
+
+        // Styling Experience Section
+        experienceSection.style.color = 'blue';
+        experienceSection.style.margin = '10px 0';
+
+        // Create Experience Details
+        let experienceDetails = document.createElement('div');
+        experienceDetails.style.padding = '10px 20px';
+
+        // Graduate Trainee Entry
+        let graduateTrainee = document.createElement('div');
+        graduateTrainee.innerHTML = "<strong>Graduate Trainee at Hindustan Aeronautics Limited</strong><br>" +
+            "11/2023 - Present, Hyderabad, Telangana<br>" +
+            "● Developed dynamic web pages for internal systems using Java, Spring Framework, and MySQL.<br>" +
+            "● Implemented dashboards for displaying material and product details from databases.<br>" +
+            "● Created gate pass and leave management systems to automate internal processes.<br>" +
+            "● Used HTML, CSS, and Bootstrap for responsive front-end development.<br>" +
+            "● Collaborated with teams to optimise application performance and troubleshoot issues.";
+        experienceDetails.appendChild(graduateTrainee);
+
+        // Associate Software Trainee Entry
+        let associateSoftwareTrainee = document.createElement('div');
+        associateSoftwareTrainee.innerHTML = "<strong>Associate Software Trainee at Tech Mahindra</strong><br>" +
+            "12/2022 - 03/2023, Mumbai, India<br>" +
+            "● Engaged in intensive training sessions focused on Java Programming concepts, web development, and software development.<br>" +
+            "● Participated in interactive workshops and coding exercises to reinforce learning and practical application of skills.<br>" +
+            "● Developed hands-on experience in working with modern development frameworks and tools.<br>" +
+            "● Gained proficiency in Java programming and database management.";
+        experienceDetails.appendChild(associateSoftwareTrainee);
+
+        // Append Experience Details
+        document.body.appendChild(experienceDetails);
+
+        // Styling Experience Details
+        experienceDetails.style.fontSize = '16px';
+        experienceDetails.style.lineHeight = '1.5';
+        experienceDetails.style.marginTop = '10px';
+
+        // Projects Section
+        let projectsSection = document.createElement('h2');
+        projectsSection.textContent = "Projects:";
+        document.body.append(projectsSection);
+
+        document.body.appendChild(createHorizontalLine());
+
+
+        // Styling Projects Section
+        projectsSection.style.color = 'blue';
+        projectsSection.style.margin = '10px 0';
+
+        // Create Project Details
+        let projectsDetails = document.createElement('div');
+        projectsDetails.style.padding = '10px 20px';
+
+        // Student Management System Entry
+        let studentManagementSystem = document.createElement('div');
+        studentManagementSystem.innerHTML = "<strong>Student Management System</strong><br>" +
+            "●Designed and developed a user-friendly student management system using Spring Framework, allowing students and college management to browse and get the attendance, search for student details.<br>" +
+            "● Enables students and college management to browse attendance and search for student details efficiently.<br>" +
+            "● Integrated MySQL for robust database management, ensuring seamless data storage and retrieval.<br>" +
+            "● Implemented key features such as adding, removing, and updating student details, improving data accuracy and ease of use.<br>" +
+            "● Implemented gate pass requests for the students that are approved by the incharge.<br>" +
+            "● Used technologies: HTML, CSS, Java, MySQL, Spring Framework, Spring Boot.";
+        projectsDetails.appendChild(studentManagementSystem);
+
+        // Append Project Details
+        document.body.appendChild(projectsDetails);
+
+        // Styling Project Details
+        projectsDetails.style.fontSize = '16px';
+        projectsDetails.style.lineHeight = '1.5';
+        projectsDetails.style.marginTop = '10px';
+
+
+
+        // Skills Section
+        let skillsSection = document.createElement('h2');
+        skillsSection.textContent = "Skills:";
+        document.body.append(skillsSection);
+
+        document.body.appendChild(createHorizontalLine());
+
+        // Styling Skills Section
+        skillsSection.style.color = 'blue';
+        skillsSection.style.margin = '10px 0';
+
+        // Create Skills Details
+        let skillsDetails = document.createElement('div');
+        skillsDetails.style.padding = '10px 20px';
+
+        // Front-End Technologies
+        let frontEndSkills = document.createElement('div');
+        frontEndSkills.innerHTML = "<strong>Front-End Technologies:</strong> HTML, CSS, JavaScript";
+        skillsDetails.appendChild(frontEndSkills);
+
+        // Back-End Technologies
+        let backEndSkills = document.createElement('div');
+        backEndSkills.innerHTML = "<strong>Back-End Technologies:</strong> Java";
+        skillsDetails.appendChild(backEndSkills);
+
+        // Databases
+        let databasesSkills = document.createElement('div');
+        databasesSkills.innerHTML = "<strong>Databases:</strong> MySQL";
+        skillsDetails.appendChild(databasesSkills);
+
+        // Frameworks/Libraries
+        let frameworksSkills = document.createElement('div');
+        frameworksSkills.innerHTML = "<strong>Frameworks/Libraries:</strong> Spring, Spring Boot, Bootstrap";
+        skillsDetails.appendChild(frameworksSkills);
+
+        // Tools
+        let toolsSkills = document.createElement('div');
+        toolsSkills.innerHTML = "<strong>Tools:</strong> Git, GitHub, Postman";
+        skillsDetails.appendChild(toolsSkills);
+
+        // Append Skills Details
+        document.body.appendChild(skillsDetails);
+
+        // Styling Skills Details
+        skillsDetails.style.fontSize = '16px';
+        skillsDetails.style.lineHeight = '1.5';
+        skillsDetails.style.marginTop = '10px';
+
+        // Certifications Section
+        let certificationsSection = document.createElement('h2');
+        certificationsSection.textContent = "Certifications:";
+        document.body.append(certificationsSection);
+
+        document.body.appendChild(createHorizontalLine());
+
+        // Styling Certifications Section
+        certificationsSection.style.color = 'blue';
+        certificationsSection.style.margin = '10px 0';
+
+        // Create Certifications Details
+        let certificationsDetails = document.createElement('div');
+        certificationsDetails.style.padding = '10px 20px';
+
+        // Certifications List
+        let certification1 = document.createElement('div');
+        certification1.textContent = "Participating in Corporate Training (06/2022 - 11/2022) Authorized by Tecknowledge.";
+        certificationsDetails.appendChild(certification1);
+
+        let certification2 = document.createElement('div');
+        certification2.textContent = "The Complete Java Course (03/2023 - 05/2023) Authorized by Udemy.";
+        certificationsDetails.appendChild(certification2);
+
+        let certification3 = document.createElement('div');
+        certification3.textContent = "Spring Framework in Easy Steps (06/2023 - 08/2023) Authorized by Udemy.";
+        certificationsDetails.appendChild(certification3);
+
+        // Append Certifications Details
+        document.body.appendChild(certificationsDetails);
+
+        // Styling Certifications Details
+        certificationsDetails.style.fontSize = '16px';
+        certificationsDetails.style.lineHeight = '1.5';
+        certificationsDetails.style.marginTop = '10px';
+
+        // Interests Section
+        let interestsSection = document.createElement('h2');
+        interestsSection.textContent = "Interests:";
+        document.body.append(interestsSection);
+
+        document.body.appendChild(createHorizontalLine());
+
+        // Styling Interests Section
+        interestsSection.style.color = 'blue';
+        interestsSection.style.margin = '10px 0';
+
+        // Create Interests Details
+        let interestsDetails = document.createElement('div');
+        interestsDetails.style.padding = '10px 20px';
+
+        // Interests List
+        let interest1 = document.createElement('div');
+        interest1.textContent = "Learning new technologies";
+        interestsDetails.appendChild(interest1);
+
+        let interest2 = document.createElement('div');
+        interest2.textContent = "Travelling and music";
+        interestsDetails.appendChild(interest2);
+
+        let interest3 = document.createElement('div');
+        interest3.textContent = "Social Activities";
+        interestsDetails.appendChild(interest3);
+
+        // Append Interests Details
+        document.body.appendChild(interestsDetails);
+
+        // Styling Interests Details
+        interestsDetails.style.fontSize = '16px';
+        interestsDetails.style.lineHeight = '1.5';
+        interestsDetails.style.marginTop = '10px';
+
+
+
+
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>

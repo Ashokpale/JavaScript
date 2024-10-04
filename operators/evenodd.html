@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Even Odd Number Checker</title>
+</head>
+
+<body>
+
+    <h1>Even and Odd Number Checker</h1>
+    <div class="container">
+        <input type="text" id="number1" placeholder="Enter Number"><br><br>
+        <div class="btn">
+            <button onclick="evenOddCheck()">Check</button>
+        </div>
+        <br>
+        <div id="result"></div>
+    </div>
+
+    <script>
+        function evenOddCheck() {
+            let number1 = parseFloat(document.getElementById('number1').value);
+            let result = document.getElementById('result');
+
+            if (number1 % 2 === 0) {
+                result.innerHTML = "Even number";
+                result.style.color = "green";
+            } else {
+                result.innerHTML = "Odd number";
+                result.style.color = "blue";
+            }
+
+        //     ternary operator
+        //     console.log(num % 2 === 0 ? "Even number" : "Odd number");
+        }
+    </script>
+</body>
+
+</html>
