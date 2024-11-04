@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OTP Generator</title>
+</head>
+
+<body>
+    <div id="otpDisplayArea"></div>
+
+    <script>
+       
+        function otpGenerator(length = 6) {
+            let otp = '';
+            for (let i = 0; i < length; i++) {
+                otp += Math.floor(Math.random() * 10); 
+            }
+            return otp;
+        }
+
+     
+        const otp = otpGenerator(); 
+        console.log("Generated OTP is " + otp); 
+
+      
+        let otpSuccessMsg = document.createElement('h1');
+        otpSuccessMsg.textContent = "Generated OTP is: " + otp  ;
+
+      
+        const displayArea = document.getElementById("otpDisplayArea");
+        if (displayArea) {
+            displayArea.appendChild(otpSuccessMsg);
+        } else {
+            console.error("Display area not found"); 
+        }
+    </script>
+</body>
+
+</html>

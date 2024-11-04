@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .imag-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        img {
+            display: none;
+            width: 30%;
+            height: 350px;
+        }
+
+        .btn-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        button {
+            margin: 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="btn-container">
+        <button id="btn1">Show Image 1</button>
+        <button id="btn2">Show Image 2</button>
+        <button id="btn3">Show Image 3</button>
+    </div>
+
+    <div class="imag-container">
+        <img id="img1" src="images/weeknd × RAJINIKANTH.jpeg" alt="rajini">
+        <img id="img2" src="images/En vaanile song wallpaper.jpeg" alt="ranijisridevi">
+        <img id="img3" src="images/Ajith Kumar.jpeg" alt="ajith">
+    </div>
+
+    <script>
+
+        const btn1 = document.getElementById('btn1');
+        const btn2 = document.getElementById('btn2');
+        const btn3 = document.getElementById('btn3');
+
+        const img1 = document.getElementById('img1');
+        const img2 = document.getElementById('img2');
+        const img3 = document.getElementById('img3');
+
+        function hideAllImages() {
+            img1.style.display = 'none';
+            img2.style.display = 'none';
+            img3.style.display = 'none';
+        }
+
+    
+        btn1.addEventListener('click', () => {
+            hideAllImages(); 
+            img1.style.display = 'block'; 
+        });
+
+        btn2.addEventListener('click', () => {
+            hideAllImages(); 
+            img2.style.display = 'block'; 
+        });
+
+        btn3.addEventListener('click', () => {
+            hideAllImages();
+            img3.style.display = 'block';
+        });
+    </script>
+
+</body>
+
+</html>

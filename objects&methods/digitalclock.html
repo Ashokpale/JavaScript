@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Clock with Date and Day</title>
+    <style>
+        .main {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 50px;
+            margin: 120px auto;
+            border: 2px solid red;
+            height: 150px;
+            width: 350px;
+            font-family: 'Courier New', Courier, monospace;
+            color: #00FF00;
+
+            background-color: #000;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+
+        .clock {
+            font-size: 2em;
+            animation: glow 1s infinite alternate;
+        }
+
+        .date {
+            font-size: 1.2em;
+            margin-top: 10px;
+            color: #00FF00;
+            animation: glow 1s infinite alternate;
+        }
+
+
+        @keyframes glow {
+            0% {
+                text-shadow: 0 0 10px #00FF00, 0 0 20px #00FF00, 0 0 30px #00FF00, 0 0 40px #00FF00;
+            }
+
+            100% {
+                text-shadow: 0 0 5px #00FF00, 0 0 10px #00FF00, 0 0 15px #00FF00, 0 0 20px #00FF00;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="main">
+        <h3>Digital Clock</h3>
+        <div class="clock" id="clock">--:--:--</div>
+        <div class="date" id="date">--, -- -- ----</div>
+    </div>
+
+    <script>
+
+        function updateClock() {
+            const clockElement = document.getElementById("clock");
+            const dateElement = document.getElementById("date");
+            const now = new Date();
+
+
+            const hours = String(now.getHours()).padStart(2, "0");
+            const minutes = String(now.getMinutes()).padStart(2, "0");
+            const seconds = String(now.getSeconds()).padStart(2, "0");
+            clockElement.textContent = `${hours}:${minutes}:${seconds}`;
+
+
+            const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+            const dayName = days[now.getDay()];
+            const day = String(now.getDate()).padStart(2, "0");
+            const month = String(now.getMonth() + 1).padStart(2, "0");
+            const year = now.getFullYear();
+            dateElement.textContent = `${dayName}, ${day}-${month}-${year}`;
+        }
+
+
+        updateClock();
+        setInterval(updateClock, 1000);
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form with Append and Reset</title>
+    <style>
+        .main {
+            display: flex;
+            flex-direction: column;
+            width: 50%;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+        }
+
+        .input {
+            padding: 10px;
+            margin: 10px 0;
+            width: 100%;
+            box-sizing: border-box;
+            background-color: #f8f8f8;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        #btn {
+            padding: 10px 20px;
+            background-color: blue;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        #databox {
+            margin-top: 15px;
+            font-size: 1.1em;
+            color: green;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="main">
+        <form id="myForm">
+            <input type="date" id="date" class="input" required>
+            <input type="text" id="name" placeholder="Enter your name" class="input" required>
+            <button type="submit" id="btn">Submit</button>
+        </form>
+        <div id="databox"></div>
+    </div>
+
+    <script>
+        // Get references to the form, inputs, and display container
+        const form = document.getElementById("myForm");
+        const inputDate = document.getElementById("date");
+        const inputName = document.getElementById("name");
+        const dateBox = document.getElementById("databox");
+
+        // Add an event listener to handle form submission
+        form.addEventListener("submit", (event) => {
+            // Prevent the default form submission behavior
+            event.preventDefault();
+
+            // Get the values of the date and name inputs
+            const selectedDate = inputDate.value;
+            const enteredName = inputName.value;
+
+            // Create a new paragraph element to hold the submitted data
+            const entry = document.createElement("p");
+            console.log(entry);
+            
+            entry.textContent = `Selected Date: ${selectedDate}, Name: ${enteredName}`;
+
+            // Append the new entry to the databox
+            dateBox.append(entry);
+
+            // Reset the form fields
+            form.reset();
+        });
+    </script>
+
+</body>
+
+</html>

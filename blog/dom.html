@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+
+    <div class="myclass">
+        <h1>
+            This Is Text Page
+        </h1>
+        <button id="btn">Click me</button>
+        <p>Button clicked <span id="count">0</span> times.</p>
+        <div id="posts"></div> <!-- Container to hold the new posts -->
+
+    </div>
+
+
+    <script>
+
+
+        const button = document.getElementById("btn");
+        const countDisplay = document.getElementById("count");
+        const postsContainer = document.getElementById("posts"); // Container for new posts
+
+        let count = 0;
+
+        button.addEventListener("click", function () {
+            count++; // Increment count on each click
+            countDisplay.textContent = count; // Update the count on the page
+
+            // Create a new paragraph element
+            let newPost = document.createElement('p');
+            newPost.textContent = `Button Clicked: ${count}`; // Set the text content
+           
+
+            newPost.classList.add('highlight'); 
+            // Append the new post to the posts container
+            postsContainer.appendChild(newPost);
+
+
+        });
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button-Triggered Image Display</title>
+    <style>
+        .container {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .button-container {
+            margin-bottom: 20px;
+        }
+
+        .button-container button {
+            padding: 10px 20px;
+            margin: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        #imageDisplay {
+            max-width: 100%;
+            max-height: 380px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="button-container">
+            <button
+                onclick="displayImage('https://images.unsplash.com/photo-1534010593276-5a785a71e7b4?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')">Show
+                Image 1</button>
+            <button
+                onclick="displayImage('https://images.unsplash.com/photo-1598769398698-bab7f1b4cadd?q=80&w=1937&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')">Show
+                Image 2</button>
+            <button
+                onclick="displayImage('https://images.unsplash.com/photo-1590223357622-d7ba1d88d3f7?q=80&w=2067&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')">Show
+                Image 3</button>
+            <button
+                onclick="displayImage('https://images.unsplash.com/photo-1597653787140-0cf4300c5a21?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')">Show
+                Image 4</button>
+        </div>
+        <img id="imageDisplay" src="" alt="Selected Image will appear here" />
+    </div>
+
+    <script>
+        function displayImage(imageSrc) {
+            const imageDisplay = document.getElementById('imageDisplay');
+            imageDisplay.src = imageSrc; // Update the image source
+            imageDisplay.alt = "Displayed Image"; // Set the alt text
+        }
+    </script>
+</body>
+
+</html>
